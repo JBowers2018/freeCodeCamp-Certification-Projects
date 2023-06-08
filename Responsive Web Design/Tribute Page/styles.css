@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(39, 100%, 90%);
+  font-family: helvetica;
+}
+
+img {
+  max-width: 100%;
+  max-height: 300px;
+  margin: 10px auto;
+  display: block;
+}
+
+figure {
+  max-width: 300px;
+  margin: 0 auto;
+  height: auto;
+  padding: 10px 0;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: hsl(39, 100%, 96%)
+}
+
+figcaption {
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+#tribute-info {
+  margin: 2em auto;
+  max-width: 500px;
+}
+
+#tribute-info > h3 {
+  text-align: center;
+}
+
+#tribute-info > p {
+  padding-left: 40px;
+}

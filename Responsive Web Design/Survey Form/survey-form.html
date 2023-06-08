@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pet Survey Form</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Pet Survey Form</h1>
+    <p id="description">Tell us about your pet-ferences!</p>
+    <div class="content">
+      <form id="survey-form">
+        <fieldset id="basic-info">
+        <label id="name-label" for="name">Name: <input id="name" type="text" name="name" placeholder="John Doe" required></label>
+        <label id="email-label" for="email">Email: <input id="email" type="email" name="email" placeholder="example@email.com" required></label>
+        <label id="number-label" for="number">Age: <input id="number" type="number" name="age" min=13 max=120 placeholder="13-120"></label>
+          </fieldset>
+          <fieldset id="favorite-pet">
+            <label id="dropdown-label" for="dropdown">What is your favorite kind of pet?
+            <select id="dropdown">
+              <option value="">Select One</option>
+              <option value="1">Dog</option>
+              <option value="2">Cat</option>
+              <option value="3">Fish</option>
+              <option value="4">Hamster</option>
+              <option value="5">Rabbit</option>
+              <option value="6">Snake</option>
+              <option value="7">Spider</option>
+              <option value="8">Other (Please specify below.)</option>
+              <option value="9">I don't like animals.</option>
+            </select>
+          </fieldset>
+          <fieldset id="has-pets">
+        </label>
+        <p>Do you have any pets?</p>
+        <label id="yes-label" for="yes"><input id="yes" type="radio" name="yes-no" value="true"> Yes</label>
+        <label id="no-label" for="no"><input id="no" type="radio" name="yes-no" value="false"> No</label>
+        </fieldset>
+        <fieldset id="wanted-pets">
+        <p class="has-note">What kind of pets would you like to have?</p>
+        <p class="note">(Select all that apply.)</p>
+        <label id = "dog-label" for="dog"><input id="dog" type="checkbox" value="1"> Dog</label>
+        <label id = "cat-label" for="cat"><input id="cat" type="checkbox" value="2"> Cat</label>
+        <label id = "fish-label" for="fish"><input id="fish" type="checkbox" value="3"> Fish</label>
+        <label id = "hamster-label" for="hamster"><input id="hamster" type="checkbox" value="4"> Hamster</label>
+        <label id = "rabbit-label" for="rabbit"><input id="rabbit" type="checkbox" value="5"> Rabbit</label>
+        <label id = "snake-label" for="snake"><input id="snake" type="checkbox" value="6"> Snake</label>
+        <label id = "spider-label" for="spider"><input id="spider" type="checkbox" value="7"> Spider</label>
+        <label id = "other-label" for="other"><input id="other" type="checkbox" value="8"> Other (Please specify below.)</label>
+        </fieldset>
+        <fieldset id="comments-field">
+        <label id = "comments-label" for="comments">Additional Comments<textarea id="comments" rows="3" cols="30" placeholder="Tell us your favorite pet story, or let us know if there's anything we can do to improve!"></textarea></label>
+        </fieldset>
+        <input id="submit" type="submit" name="Submit">
+      </form>
+    </div>
+  </body>
+</html>

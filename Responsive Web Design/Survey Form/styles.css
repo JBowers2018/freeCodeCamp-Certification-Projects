@@ -1,0 +1,64 @@
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Tahoma;
+  font-size: 16px;
+  background-color: rgba(0, 0, 75, 85%);
+  color: white
+}
+
+.content {
+  background: linear-gradient(rgba(225, 255, 255, 50%), white);
+  color: black;
+  width: 80vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 2em auto;
+  padding-bottom: 2em;
+  padding-top: 0.5em;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-top: 0.5em;
+  min-height: 2em;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: unset;
+  vertical-align: middle;
+  margin: 0 0.5rem 0 0;
+}
+
+fieldset {
+  border: none;
+}
+
+.has-note {
+  margin-bottom: 0;
+}
+
+.note {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: rgba(0, 200, 0, 50%);
+  color: black;
+  width: 60%;
+  margin: 0.5em auto;
+  display: block;
+}
+
+h1, p[id="description"] {
+text-align: center;
+}
