@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1 class="nav-header">Java Documentation</h1>
+      </header>
+      <a class="nav-link" href="#Introduction"">Introduction</a>
+      <a class="nav-link" href="#Hello_World">Hello World</a>
+      <a class="nav-link" href="#Classes_&_Objects">Classes & Objects</a>
+      <a class="nav-link" href="#Methods">Methods</a>
+      <a class="nav-link" href="#Variables">Variables</a>
+    <a class="nav-link" href="#References">References</a>
+    </nav>
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>
+          <h1>Introduction</h1>
+        </header>
+        <p>Java is an Object-Oriented programming language that has gained much popularity due to its high level of flexibility, as well as its beginner-friendly nature. The four main concepts of object-oriented programming introduced by Java are: 
+        </p>
+        <ul>
+          <li>Abstraction</li>
+          <li>Polymorphism</li>
+          <li>Inheritance</li>
+          <li>Encapsulation</li>
+        </ul>
+        <p>Or APIE, for short.</p>
+        <p>The purpose of this documentation is to give a basic tutorial on how to use Java and explain a few of its concepts.</p>
+      </section>
+      <section id="Hello_World" class="main-section">
+        <header>
+          <h1>Hello World</h1>
+        </header>
+        <p>Here's an example of a simple Hello World program written in Java:</p>
+        <h4>Application.java</h4>
+        <code>public class Application {
+          <div class="nest-1">
+            public static void main(String args[]) {
+          </div>
+          <div class="nest-2">
+            System.out.println("Hello World!");
+          </div>
+          <div class="nest-1">
+            }
+          </div>
+          }
+        </code>
+
+        <h4>Output</h4>
+        <code>
+          Hello World!
+        </code>
+        <p></p>
+      </section>
+      <section id="Classes_&_Objects" class="main-section">
+        <header>
+          <h1>Classes & Objects</h1>
+        </header>
+        <h3>Classes</h3>
+        <p>A class in Java is essentially a container for all the data and functions that relate to a specific concept or component. Typically, class names are meant to be informative, letting people know what the data pertains to, in this case, the Application.</p>
+        <h3>Access Modifiers</h3>
+        <p>The keyword that comes before "class" is known as an access modifier. Access modifiers tell the program which other parts of the application are able to see and potentially modify their data. In this case, our "public" access modifier is telling the program that this class can be seen from anywhere else in the application. Here are some examples of other types of access modifiers: 
+        </p>
+        <ul>
+          <li>private</li>
+          <li>protected</li>
+          <li>default</li>
+        </ul>
+        <p>
+          In general, it is best practice to label classes and methods as "public" so that they can be seen and used, and variables as "private" so that they cannot be modified directly.
+        </p>
+        <h3>Objects</h3>
+        <p>
+          An object is an instance of any given class. If you think of a class like a blueprint, like a blueprint for a house, an object of that class would be the house. It is the physical implementation that contains the data outlined in its class.
+        </p>
+        <p>
+          We wouldn't create an object of the class Application, because it is our main class where the program starts. However, if we added another class, we could decide to use it in our main class by creating an object. For example: 
+        </p>
+        <h4>Dog.java</h4>
+        <code>
+          public class Dog { }
+        </code>
+
+        <h4>Application.java</h4>
+        <code>public class Application {
+          <div class="nest-1">
+            public static void main(String args[]) {
+          </div>
+          <div class="nest-2">
+            System.out.println("Hello World!");
+          </div>
+          <div class="nest-2">
+            // Here we are creating a new object of the Dog class called "dog"
+          </div>
+          <div class="nest-2">
+            Dog dog = new Dog();
+          </div>
+          <div class="nest-2">
+            System.out.println("A new dog was born!");
+          </div>
+          <div class="nest-1">
+            }
+          </div>
+          }
+        </code>
+
+        <h4>Output</h4>
+        <code>
+          Hello World!
+          <br>
+          A new dog was born!
+        </code>
+      </section>
+      <section id="Methods" class="main-section">
+        <header>
+          <h1>Methods</h1>
+        </header>
+        <p>A method in Java is a set of steps for the program to follow in order to perform an action. In other words, it's Java's version of a function. Recall that in Application.java, we have a method called "main."</p>
+
+
+        <p>In this method, we print out a message, instantiate a Dog object, and print out another message to confirm this. But what if the dog needs to get our attention? We can add a method in the Dog class to accomplish this.</p>
+        <h4>Dog.java</h4>
+        <code>
+          public class Dog {
+          <div class="nest-1">
+            public void bark() {
+          </div>
+          <div class="nest-2">
+            System.out.println("Woof!");
+          </div>
+          <div class="nest-1">}
+          </div>
+          }
+        </code>
+
+        <p>In order to use this method, we must call it in our main method via the dog object: </p>
+
+        <h4>Application.java</h4>
+        <code>public class Application {
+          <div class="nest-1">
+            public static void main(String args[]) {
+          </div>
+          <div class="nest-2">
+            System.out.println("Hello World!");
+          </div>
+          <div class="nest-2">
+            // Here we are creating a new object of the Dog class called "dog"
+          </div>
+          <div class="nest-2">
+            Dog dog = new Dog();
+          </div>
+          <div class="nest-2">
+            System.out.println("A new dog was born!");
+          </div>
+          <div class="nest-2">
+            // And here we are calling its method, "bark"
+          </div>
+          <div class="nest-2">
+            dog.bark();
+          </div>
+          <div class="nest-1">
+            }
+          </div>
+          }
+        </code>
+
+        <p>Now when we run the program, we can see (or perhaps "hear") that the dog is barking!</p>
+
+        <h4>Output</h4>
+        <code>
+          Hello World!
+          <br>
+          A new dog was born!
+          <br>
+          Woof!
+        </code>
+      </section>
+
+      <section id="Variables" class="main-section">
+        <header>
+          <h1>Variables</h1>
+        </header>
+        <p>In Java, like in other programming languages, a variable is a user-defined container for storing data. They are typically helpful when you want to keep track of certain information, like a person's name or how many miles a car has traveled.
+        </p>
+        <p>Every variable must have a data type in order for the program to know what kind of data will be stored. Some examples of data types include: </p>
+        <div class="table">
+        <ul>
+          <li>int</li>
+          <li>double</li>
+          <li>boolean</li>
+          <li>String</li>
+          <li>Class</li>
+        </ul>
+        <ul class="definitions">
+          <li>integer</li>
+          <li>decimal</li>
+          <li>true/false</li>
+          <li>text</li>
+          <li>object</li>
+        </ul>
+        </div>
+        <p>We've actually already created a variable in our Application class:</p>
+        <code>
+          Dog dog = new Dog();
+        </code>
+        <p>Our variable "dog" has a data type of Class, or more specifically, Dog. That's why we were able to assign it to an object of the Dog class. But if we were to try: </p>
+        <code>
+          int dog = new Dog();
+        </code>
+        </p>The code would not compile, because the program was expecting data of type "int" or "integer", and thus could not store data of type "Dog".</p>
+
+
+        <p>Now, let's take a look at our Dog class: 
+        </p>
+        <h4>Dog.java</h4>
+        <code>
+          public class Dog {
+          <div class="nest-1">
+            public void bark() {
+          </div>
+          <div class="nest-2">
+            System.out.println("Woof!");
+          </div>
+          <div class="nest-1">}
+          </div>
+          }
+        </code>
+        <p>
+          They can bark now, but there's not much else to them. We don't know their name, their age, or even what their favorite toy is. We can fix that by adding some variables: 
+        </p>
+        <h4>Dog.java</h4>
+        <code>
+          public class Dog {
+            <div class="nest-1">
+            private String name = "Molly";
+          </div>
+          <div class="nest-1">
+            private int age = 3;
+          </div>
+          <div class="nest-1">
+            private String favoriteToy = "tennis ball";
+          </div>
+          <br>
+          <div class="nest-1">
+            public void bark() {
+          </div>
+          <div class="nest-2">
+            System.out.println("Woof!");
+          </div>
+          <div class="nest-1">}
+          </div>
+          }
+        </code>
+
+        <h3>Getters & Setters</h3>
+        <p>Great! Our dog's name is Molly, she's three years old, and her favorite toy is a tennis ball. But notice how these variables were made "private". This means we cannot directly access them from our main method, like we could with "bark".</p>
+        <code>
+          // This would not work.
+          <br>
+          System.out.println(dog.name);
+        </code>
+        <p>Instead we must create a set of helper methods in the Dog class to get this information for us. We call these methods "getters".</p>
+        <h4>Dog.java</h4>
+        <code>
+          ...
+          <br>
+          public int getName() {
+            <div class="nest-1">
+              return name;
+            </div>
+          }
+          <br>
+          public int getAge() {
+            <div class="nest-1">
+              return age;
+            </div>
+          }
+          <br>
+          public String getFavoriteToy() {
+            <div class="nest-1">
+              return favoriteToy;
+            </div>
+          }
+        </code>
+
+        <p>And now we can call the getters from our main method</p>
+
+        <h4>Application.java</h4>
+        <code>public class Application {
+          <div class="nest-1">
+            public static void main(String args[]) {
+          </div>
+          <div class="nest-2">
+            ...
+          </div>
+          <div class="nest-2">
+            // Print the dog's information using getters
+          </div>
+          <div class="nest-2">
+            System.out.println(dog.getName() + " is " + dog.getAge() + " years old, and their favorite toy is a " + dog.getFavoriteToy() + "!");
+          </div>
+          <div class="nest-1">
+            }
+          </div>
+          }
+        </code>
+        <h4>Output</h4>
+        <code>
+          ...
+          <br>
+          Molly is 3 years old, and their favorite toy is a tennis ball!
+        </code>
+
+        <p>Now let's imagine that Molly tore up her favorite tennis ball, and now she has a new favorite toy. Like before, we can't change them directly.</p>
+        <code>
+          // The variables are still private, so this wouldn't work either.
+          <br>
+          dog.favoriteToy = "tug-of-war rope";
+        </code>
+
+        <p>So, like before, we must create helper methods in the Dog class to change this information. We call these methods "setters".</p>
+
+        <h4>Dog.java</h4>
+        <code>
+          ...
+          <br>
+          public void setAge(int age) {
+            <div class="nest-1">
+              this.age = age;
+            </div>
+          }
+          <br>
+          public void setFavoriteToy(String favoriteToy) {
+            <div class="nest-1">
+              this.favoriteToy = favoriteToy;
+            </div>
+          }
+        </code>
+        <p>
+          Notice how we did not create a setter for "name". Names are unlikely to change, so we typically keep that kind of information for our records only. Now let's replace that ruined toy!
+        </p>
+
+        <h4>Application.java</h4>
+        <code>public class Application {
+          <div class="nest-1">
+            public static void main(String args[]) {
+          </div>
+          <div class="nest-2">
+            // Store the dog's name in a variable for reusability.
+          </div>
+          <div class="nest-2">
+            String name = dog.getName();
+          </div>
+          <div class="nest-2">
+            ...
+          </div>
+          <div class="nest-2">
+            // Update the dog's information using setters.
+          </div>
+          <div class="nest-2">
+            dog.setFavoriteToy("tug-of-war rope");
+          </div>
+          <div class="nest-2">
+            // Print the dog's information using getters
+          </div>
+          <div class="nest-2">
+            System.out.println(name + "'s new favorite toy is a " + dog.getFavoriteToy() + "!");
+          </div>
+          <div class="nest-1">
+            }
+          </div>
+          }
+        </code>
+        <h4>Output</h4>
+        <code>
+          ...
+          <br>
+          Molly's new favorite toy is a tug-of-war rope!
+        </code>
+        <p>Now we can see that the toy is replaced and Molly is happy again!</p>
+      </section>
+      <section id="References" class="main-section">
+        <header>
+          <h1>References</h1>
+        </header>
+          <p>The documentation on this page was sourced from: </p>
+          <ul>
+            <li><a target="_blank" href=https://www.w3schools.com/java/default.asp>W3Schools</a></li>
+            <li>My current knowledge</li>
+          </ul>
+      </section>
+    </main>
+  </body>
+</html>
