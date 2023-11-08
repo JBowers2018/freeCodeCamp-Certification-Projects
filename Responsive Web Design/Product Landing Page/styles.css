@@ -1,0 +1,217 @@
+* { 
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Book Antiqua", "sans-serif";
+}
+
+input[type="submit"], button {
+  text-transform: uppercase;
+}
+
+ol, ul {
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #eee;
+  width: 100%;
+}
+
+.logo {
+  width: 60vw;
+}
+
+#header-img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+#nav-bar {
+  width: 40vw;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-bar li {
+  list-style: none;
+}
+
+section:not(#hero) {
+  margin-top: 40px;
+}
+
+.grid {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 20vw;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 150px;
+}
+
+#hero input[type="email"] {
+  margin-bottom: 10px;
+}
+
+#hero input[type="submit"] {
+  padding: 5px 20px;
+  background: pink;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+#leaf {
+  color: #5cb35b;
+}
+
+#water {
+  color: #2288CC;
+}
+
+#clock {
+  color: #888888;
+}
+
+.feature-desc {
+  width: 80vw;
+}
+
+.feature-desc p {
+  font-family: "Book Antiqua", "sans-serif";
+}
+
+.feature-title, .feature-desc p {
+  margin: 0;
+}
+
+.feature-title, #hero h2 {
+  font-weight: 600;
+}
+
+#how-it-works {
+  display: flex;
+  justify-content: center;
+}
+
+#pricing {
+  display: flex;
+  justify-content: center;
+}
+
+.product {
+  border: 1px solid;
+  margin: 10px;
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+.product-title {
+  background-color: #ddd;
+  font-weight: 700;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+.product-desc ol li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.product h2 {
+  margin: 5px 0;
+  font-size: 1.5em;
+}
+
+.product-select {
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: pink;
+  border: none;
+  border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero {
+    margin-top: 250px;
+  }
+
+  #nav-bar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .feature-desc {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  #pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .product {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
