@@ -15,6 +15,15 @@ ol, ul {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .container {
   max-width: 1000px;
   width: 100%;
@@ -54,15 +63,6 @@ ol, ul {
 #nav-bar ul {
   display: flex;
   justify-content: space-around;
-}
-
-#nav-bar a {
-  text-decoration: none;
-  color: black;
-}
-
-#nav-bar li {
-  list-style: none;
 }
 
 section:not(#hero) {
@@ -156,7 +156,6 @@ section:not(#hero) {
 }
 
 .product-desc ol li {
-  list-style: none;
   padding: 5px 0;
 }
 
@@ -171,6 +170,29 @@ section:not(#hero) {
   background-color: pink;
   border: none;
   border-radius: 5px;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer > ul > li {
+    padding: 0 10px;
+}
+
+footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
 }
 
 
@@ -214,4 +236,3 @@ section:not(#hero) {
     width: 100%;
   }
 }
-
